@@ -13,6 +13,13 @@
                 Deform a source mesh to form a target mesh using 3D loss functions</a><br>
         </div>
 		<div style="position:absolute; top: 15%; left: 50%;"> <p id="modelNum">iter #0</p> </div>
+		<div style="position: fixed; bottom: 10px; left: 50%; display:block; margin-left: -70px;">
+			<select id=load_model_ply >
+				<option value="dolphin">dolphin</option>
+				<option value="cow">cow</option>
+			</select>
+			<button type="button" id=load_model_b>Load Model</button>
+		</div>
 		<script src="scoreoutputer.min.js"></script>
 		<script>
 			// 建構子 ScoreOutputer 接受一個字串，該字串為 csv 的檔案名稱
@@ -65,13 +72,7 @@
 				);
 			});
 		</script>
-		<div>
-			<select id=load_model_ply >
-				<option value="dolphin">dolphin</option>
-				<option value="cow">cow</option>
-			</select>
-			<button type="button" id=load_model_b>Load Model</button>
-		</div>
+		
 		<script type="module">
 
 			import * as THREE from './build/three.module.js';
